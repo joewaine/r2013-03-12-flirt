@@ -1,0 +1,11 @@
+= form_for @subscriber, :remote => true do |f|
+  = f.label :username
+  = f.text_field :username
+  = f.label :email
+  = f.text_field :email
+  = f.label :password
+  = f.password_field :password
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation
+  = button_to_function('Cancel', 'cancel_subscriber_form()')
+  = f.submit
